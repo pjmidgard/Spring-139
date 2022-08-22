@@ -593,6 +593,8 @@ class compression:
                                                     Long_block4=0
                                                     Long_block5=0
                                                     Long_block6=0  
+                                                    times_of_times=times_of_times+1
+                                                    #print(times_of_times)
                                                     
                                                     long_file=len(size_data10)
                                                     long_after=len(size_data9)
@@ -603,7 +605,7 @@ class compression:
                                            
                                             size_data11=size_data9
                                             Find_guess=1
-                                            times_of_times=times_of_times+1
+                                            
                                         
        
                                     size_data24=bin(times_of_times)[2:]
