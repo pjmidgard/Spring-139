@@ -247,6 +247,13 @@ class compression:
                                                     block_compression=0
                                                     block_compression2=0
                                                     long=len(size_data3)
+
+                                                    Divide_block=0
+                                                    Divide_block=long%long_block
+
+                                                    Last_block=size_data3[long-Divide_block:]
+
+                                                    
                                                     #print(long)
                                                     
                                                     while block<long:
@@ -297,11 +304,14 @@ class compression:
 
                                                                                         
                                                                                     sub_info1=bits1
+                                                                                    #print(b)
+                                                                                    #print(sub_info1)#
                                                                                      
                                                                                     
                                                                                                                                                                       
                                                                                     find_matches2=str_find_tree_maches.find(sub_info1, start, end)
                                                                                     find_matches1_2=int(find_matches2)
+                                                                                    
                                                                                     if find_matches1_2==0:
                                                                                         
                                                                                         
@@ -350,13 +360,15 @@ class compression:
                                                                                                                         
                                                                                                                         
                                                                                             size_data19="1"+add_bits119+size_data25+size_data30+size_data19
+                                                                                            #print("1"+add_bits119+size_data25+size_data30)#
                                                                                             
                                                                                             Find=2
 
                                                                                     
                                                                                     
                                                                                 if Find==2:
-                                                                                	 size_data4=str_find_tree_maches[4:]                                                                                                                
+                                                                                	 size_data4=str_find_tree_maches[4:]
+                                                                                	 #print(size_data4)
                                                                                 if Find==1:
                                                                                     
                                                                                     
@@ -375,7 +387,7 @@ class compression:
                                                                                     	
                                                                                     if Long_block5>=1:
                                                                                     	Long_block3=len(size_data4)
-                                                                                    size_data6+size_data6+size_data4                                          
+                                                                                                                            
                                                                               
                                                                                     size_data5=""
                                                                                     size_data7=""
@@ -402,7 +414,7 @@ class compression:
                                                                                                                                                 
                                                                                     if Long_block6>=1:
                                                                                     	Long_block3=len(size_data4)                                                                                                                               	
-                                                                                    size_data6=size_data6+size_data4
+                                                                                    
                                                                                     
                                                                                     
                                                                                    
@@ -415,6 +427,7 @@ class compression:
                                                                                     Find=1
                                                                                         
                                                                                 block=block+blocks
+                                                                                size_data6=size_data6+size_data4
                                                                                 #print(block)
                                                          
                                                     times_compression=times_compression+1
@@ -565,8 +578,8 @@ class compression:
                                                             while z<count_bits:
                                                                 add_bits118="0"+add_bits118
                                                                 z=z+1
-                                                    b1=format(Long10,'010b')          
-                                                    size_data9="1"+b+bits1+b1+add_bits118+size_data24+size_data9
+                                                    b1=format(Divide_block,'010b')          
+                                                    size_data9="1"+b+bits1+b1+add_bits118+size_data24+size_data9+Last_block
                                                     
 
                                                    
