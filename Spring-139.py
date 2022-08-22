@@ -606,6 +606,8 @@ class compression:
                                             size_data11=size_data9
                                             Find_guess=1
                                             
+                              
+                                            
                                         
        
                                     size_data24=bin(times_of_times)[2:]
