@@ -282,17 +282,17 @@ class compression:
                                                                                     if predict2==3:
                                                                                     	predict2=0
 
-                                                                                    if b[0:2]="00":	
+                                                                                    if b[0:2]=="00":	
                                                                                         bits1="01"
 
-                                                                                    elif b[0:2]="01":	
+                                                                                    elif b[0:2]=="01":	
                                                                                         bits1="00"
                                                                                     
-                                                                                    elif b[0:2]="10":	
+                                                                                    elif b[0:2]=="10":	
                                                                                         bits1="11"
 
 
-                                                                                    elif b[0:2]="11":	
+                                                                                    elif b[0:2]=="11":	
                                                                                         bits1="10"
 
                                                                                         
