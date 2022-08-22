@@ -281,10 +281,21 @@ class compression:
                                                                                     predict2=predict2+1
                                                                                     if predict2==3:
                                                                                     	predict2=0
-                                                                                    bits1="01"	
-                                                                                    	
-                                                                                    bits="01"
+
+                                                                                    if b[0:2]="00":	
+                                                                                        bits1="01"
+
+                                                                                    elif b[0:2]="01":	
+                                                                                        bits1="00"
                                                                                     
+                                                                                    elif b[0:2]="10":	
+                                                                                        bits1="11"
+
+
+                                                                                    elif b[0:2]="11":	
+                                                                                        bits1="10"
+
+                                                                                        
                                                                                     sub_info1=bits1
                                                                                      
                                                                                     
@@ -345,7 +356,7 @@ class compression:
                                                                                     
                                                                                     
                                                                                 if Find==2:
-                                                                                	 size_data4=bits1+str_find_tree_maches[4:]                                                                                                                
+                                                                                	 size_data4=str_find_tree_maches[4:]                                                                                                                
                                                                                 if Find==1:
                                                                                     
                                                                                     
@@ -355,11 +366,8 @@ class compression:
                                                                                     
                                                                                     compress_yes=compress_yes+1
                                                                                     
-                                                                                    	
-                                                                                    	                                                                                    
+                                                                                    size_data4=bits1+str_find_tree_maches[4:]
                                                                                     
-                                                                                        
-                                                                                    size_data4=str_find_tree_maches[4:]
                                                                                     Long_block5=Long_block5+1
                                                                                     if Long_block5==1:
                                                                                     	Long_block1=len(size_data4)
