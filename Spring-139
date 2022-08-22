@@ -367,7 +367,7 @@ class compression:
                                                                                     
                                                                                     
                                                                                 if Find==2:
-                                                                                	 size_data4=str_find_tree_maches[4:]
+                                                                                	 size_data4=str_find_tree_maches[2:]
                                                                                 	 #print(size_data4)
                                                                                 if Find==1:
                                                                                     
