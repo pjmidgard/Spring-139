@@ -202,7 +202,7 @@ class compression:
                                     compress_no=0
                                     compress_yes=0
                                     long2=len(size_data3)
-                                    Deep=100
+                                    Deep=65535
                                     times2=Deep
                                     long_block=1023
                                     Where5=0
