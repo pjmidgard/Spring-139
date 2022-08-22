@@ -1,7 +1,7 @@
 # Spring-139
 Spring-139
 
-Need to try to predict "0000-1111". Need to find string if cell equal 4 save. if we find on the string 
+Need to try to predict "0000-1111". Need to find string if cell equal 0 save. if we find on the string 
 
                                                                                     if b[0:2]=="00":	
                                                                                         bits1="01"
