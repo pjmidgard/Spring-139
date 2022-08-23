@@ -206,6 +206,7 @@ class compression:
                                     times2=Deep
                                     long_block=15
                                     Where5=0
+                                    long_after=long2
                                 
                                     
                                     
@@ -213,9 +214,9 @@ class compression:
                                     
                                     start=-1
                                     Find_guess=0
-                                    while Find_guess!=1:
+                                    
                                         
-                                        while  times_compression!=times2:
+                                    while  long_after>2200:
 
 
                                                     
@@ -602,15 +603,12 @@ class compression:
                                                     #print(long_after) 
                                        
                                        
-                                        if long_file>long_after:
-                                           
-                                            size_data11=size_data9
-                                            Find_guess=1
+                                        
                                             
                               
                                             
                                         
-       
+                                    size_data11=size_data9
                                     size_data24=bin(times_of_times)[2:]
                                     lenf=len(size_data24)
                                     if lenf>40:
