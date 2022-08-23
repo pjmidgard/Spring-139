@@ -202,9 +202,9 @@ class compression:
                                     compress_no=0
                                     compress_yes=0
                                     long2=len(size_data3)
-                                    Deep=65535
+                                    Deep=255
                                     times2=Deep
-                                    long_block=1023
+                                    long_block=15
                                     Where5=0
                                 
                                     
@@ -579,9 +579,9 @@ class compression:
                                                             while z<count_bits:
                                                                 add_bits118="0"+add_bits118
                                                                 z=z+1
-                                                    b1=format(Divide_block,'010b')          
+                                                    b1=format(Divide_block,'04b')          
                                                     size_data9="1"+b+bits1+b1+add_bits118+size_data24+size_data9+Last_block
-                                                    
+                                                    size_data3=size_data9
 
                                                    
                                                     
