@@ -361,7 +361,7 @@ class compression:
                                                                                                         z=z+1
                                                                                                                         
                                                                                                                         
-                                                                                            size_data19="1"+add_bits119+size_data25+size_data30+size_data19
+                                                                                            size_data19=add_bits119+size_data25+size_data30+size_data19
                                                                                             #print("1"+add_bits119+size_data25+size_data30)#
                                                                                             
                                                                                             Find=2
@@ -433,7 +433,7 @@ class compression:
                                                                                 #print(block)
                                                          
                                                     times_compression=times_compression+1
-                                                    size_data19="0"+size_data19
+                                                    
                                                     #print(times_compression)
                                                     
                                                     
@@ -454,134 +454,15 @@ class compression:
                                                     size_data9=size_data3
 
                                                     #print(size_data9)
-                                                    long=len(size_data19)    
-
-                                                    size_data24=bin(times_compression)[2:]
-                                                   
-                                                    lenf=len(size_data24)
-                                                    if lenf>40:
-                                                            print("File too big")
-                                                            raise SystemExit
-                                                                                                        
-                                                                                                        
-                                                                                                    
-                                                    add_bits118=""
-                                                    count_bits=40-lenf%40
-                                                    z=0
-                                                    if count_bits!=0:
-                                                        if count_bits!=40:
-                                                            while z<count_bits:
-                                                                add_bits118="0"+add_bits118
-                                                                z=z+1
-                                                                                                                                
-                                                                                                                                
                                                     
-                                                    lenf=len(add_bits118)
-                                                    size_data24=bin(lenf)[2:]
-                                                    #print(Long_block2)  
-                                                    lenf=len(size_data24)
-                                                    if lenf>6:
-                                                            print("File too big")
-                                                            raise SystemExit
-                                                                                                    
-                                                                                                   
-                                                                                                
-                                                    add_bits118=""
-                                                    count_bits=6-lenf%6
-                                                    z=0
-                                                    if count_bits!=0:
-                                                        if count_bits!=6:
-                                                            while z<count_bits:
-                                                                add_bits118="0"+add_bits118
-                                                                z=z+1
-                                                                
-                                                    size_data9=add_bits118+size_data24+size_data9
+                                                    
                                                     
                                                     
                                                     
                                                    
-                                                    size_data24=bin(Long_block1)[2:]
-                                                    #print(Long_block1)
-                                                    #print("Long_block1")  
-                                                                                        
-                                                    lenf=len(size_data24)
-                                                    if lenf>40:
-                                                            print("File too big")
-                                                            raise SystemExit
-                                                                                                    
-                                                                                                   
-                                                                                                
-                                                    add_bits118=""
-                                                    count_bits=40-lenf%40
-                                                    z=0
-                                                    if count_bits!=0:
-                                                        if count_bits!=40:
-                                                            while z<count_bits:
-                                                                add_bits118="0"+add_bits118
-                                                                z=z+1
-                                                                
-                                                  
-                                                    lenf=len(add_bits118) 
-                                                    size_data24=bin(lenf)[2:]
-                                                    #print(Long_block2)  
-                                                    lenf=len(size_data24)
-                                                    if lenf>6:
-                                                            print("File too big")
-                                                            raise SystemExit
-                                                                                                    
-                                                                                                   
-                                                                                                
-                                                    add_bits118=""
-                                                    count_bits=6-lenf%6
-                                                    z=0
-                                                    if count_bits!=0:
-                                                        if count_bits!=6:
-                                                            while z<count_bits:
-                                                                add_bits118="0"+add_bits118
-                                                                z=z+1
-                                                                
-                                                    size_data9=add_bits118+size_data24+size_data9
                                                     
-                                                     
-                                                    size_data24=bin(Long_block2)[2:]
-                                                    #print(Long_block2)  
-                                                    lenf=len(size_data24)
-                                                    if lenf>40:
-                                                            print("File too big")
-                                                            raise SystemExit
-                                                                                                    
-                                                                                                   
-                                                                                                
-                                                    add_bits118=""
-                                                    count_bits=40-lenf%40
-                                                    z=0
-                                                    if count_bits!=0:
-                                                        if count_bits!=40:
-                                                            while z<count_bits:
-                                                                add_bits118="0"+add_bits118
-                                                                z=z+1
-                                                                
-                                                
-                                                    lenf=len(add_bits118)
-                                                    size_data24=bin(lenf)[2:]
-                                                    #print(Long_block2)  
-                                                    lenf=len(size_data24)
-                                                    if lenf>6:
-                                                            print("File too big")
-                                                            raise SystemExit
-                                                                                                    
-                                                                                                   
-                                                                                                
-                                                    add_bits118=""
-                                                    count_bits=6-lenf%6
-                                                    z=0
-                                                    if count_bits!=0:
-                                                        if count_bits!=6:
-                                                            while z<count_bits:
-                                                                add_bits118="0"+add_bits118
-                                                                z=z+1
                                                     b1=format(Divide_block,'04b')          
-                                                    size_data9="1"+b+bits1+b1+add_bits118+size_data24+size_data9+Last_block
+                                                    size_data9="1"+b+bits1+b1+size_data9+Last_block
                                                     size_data3=size_data9
 
                                                    
@@ -607,7 +488,50 @@ class compression:
                                             
                               
                                             
-                                        
+                                    long=len(size_data19)    
+
+                                    size_data24=bin(long)[2:]
+                                                   
+                                    lenf=len(size_data24)
+                                    if lenf>40:
+                                        print("File too big")
+                                        raise SystemExit
+                                                                                                        
+                                                                                                        
+                                                                                                    
+                                    add_bits118=""
+                                    count_bits=40-lenf%40
+                                    z=0
+                                    if count_bits!=0:
+                                        if count_bits!=40:
+                                            while z<count_bits:
+                                                add_bits118="0"+add_bits118
+                                                z=z+1
+                                                                                                                                
+                                                                                                                                
+                                                    
+                                    lenf=len(add_bits118)
+                                    size_data24=bin(lenf)[2:]
+                                    #print(Long_block2)  
+                                    lenf=len(size_data24)
+                                    if lenf>6:
+                                        print("File too big")
+                                        raise SystemExit
+                                                                                                    
+                                                                                                   
+                                                                                                
+                                    add_bits118=""
+                                    count_bits=6-lenf%6
+                                    z=0
+                                    if count_bits!=0:
+                                        if count_bits!=6:
+                                            while z<count_bits:
+                                                add_bits118="0"+add_bits118
+                                                z=z+1
+                                                                
+                                    size_data9=add_bits118+size_data24+size_data19+size_data9
+                                    
+                                    
                                     size_data11=size_data9
                                     size_data24=bin(times_of_times)[2:]
                                     lenf=len(size_data24)
