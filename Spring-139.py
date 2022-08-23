@@ -252,6 +252,7 @@ class compression:
                                                     Divide_block=long%long_block
 
                                                     Last_block=size_data3[long-Divide_block:]
+                                                    size_data3=size_data3[:long-Divide_block]
 
                                                     
                                                     #print(long)
